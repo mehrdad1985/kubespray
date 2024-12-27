@@ -193,7 +193,7 @@ metallb_config:
         effect: "NoSchedule"
   controller:
     nodeselector:
-      kubernetes.io/os: "linux"
+      node-role.kubernetes.io/metallb: "true"
     tolerations:
       - key: "node-role.kubernetes.io/control-plane"
         operator: "Equal"
