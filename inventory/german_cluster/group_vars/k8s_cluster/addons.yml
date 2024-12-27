@@ -185,7 +185,7 @@ metallb_memberlist_port: "7946"
 metallb_config:
   speaker:
     nodeselector:
-      kubernetes.io/os: "linux"
+      node-role.kubernetes.io/metallb: "true"
     tolerations:
       - key: "node-role.kubernetes.io/control-plane"
         operator: "Equal"
