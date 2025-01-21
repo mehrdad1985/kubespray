@@ -185,7 +185,7 @@ metallb_memberlist_port: "7946"
 metallb_config:
   speaker:
     nodeselector:
-      kubernetes.io/os: "linux"
+      kubernetes.io/hostname: node1
     tolerations:
       - key: "node-role.kubernetes.io/control-plane"
         operator: "Equal"
@@ -193,7 +193,7 @@ metallb_config:
         effect: "NoSchedule"
   controller:
     nodeselector:
-      node-role.kubernetes.io/metallb: "true"
+      kubernetes.io/hostname: node2
     tolerations:
       - key: "node-role.kubernetes.io/control-plane"
         operator: "Equal"
