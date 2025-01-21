@@ -185,7 +185,7 @@ metallb_memberlist_port: "7946"
 metallb_config:
   speaker:
     nodeselector:
-      node-role.kubernetes.io/metallb: "true"
+      kubernetes.io/os: "linux"
     tolerations:
       - key: "node-role.kubernetes.io/control-plane"
         operator: "Equal"
@@ -202,7 +202,7 @@ metallb_config:
   address_pools:
     primary:
       ip_range:
-        - 95.216.80.87/32
+        - 5.75.192.21/32
       auto_assign: true
 #     pool1:
 #       ip_range:
